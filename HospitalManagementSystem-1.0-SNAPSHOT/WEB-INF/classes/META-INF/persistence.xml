@@ -1,0 +1,47 @@
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             version="3.0"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd">
+    <!--    <persistence-unit name="HospitalManagementSystemPU" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+         Add all your entity classes here 
+        <class>model.Patient</class>
+        <class>model.Doctor</class>
+        <class>model.Appointment</class>
+
+        <properties>
+            <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/hospital_db"/>
+            <property name="jakarta.persistence.jdbc.user" value="root"/>
+            <property name="jakarta.persistence.jdbc.password" value="AnandSQL@123"/>
+
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.show_sql" value="true"/>
+        </properties>
+    </persistence-unit>-->
+    
+    
+    <persistence-unit name="hospital_pu" transaction-type="RESOURCE_LOCAL">
+        <!--        <class>com.hospital.model.Patient</class>
+        <class>com.hospital.model.Appointment</class>-->
+        
+        <class>com.hospital.model.Appointment</class>
+        <class>com.hospital.model.Patient</class>
+        <class>com.hospital.model.Doctor</class>
+
+        <properties>
+            <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/hospital_db"/>
+            <property name="jakarta.persistence.jdbc.user" value="root"/>
+            <property name="jakarta.persistence.jdbc.password" value="AnandSQL@123"/>
+            <property name="jakarta.persistence.schema-generation.database.action" value="update"/>
+        </properties>
+    </persistence-unit>
+</persistence>
+
+
+
+
+
